@@ -2,11 +2,14 @@
 
 module.exports = {
     target: 'node',
-    entry: path.join(__dirname, 'VueApp/server.js'),
+    entry: {
+        main: path.join(__dirname, 'VueApp/server.js')
+    },
     output: {
         libraryTarget: 'commonjs2',
         path: path.join(__dirname, 'wwwroot/dist'),
         filename: 'bundle.server.js',
+        publicPath: '/dist/'
     },
     module: {
         loaders: [

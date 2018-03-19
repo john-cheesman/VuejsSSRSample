@@ -1,10 +1,13 @@
 ﻿const path = require('path');
 
 module.exports = {
-    entry: path.join(__dirname, 'VueApp/client.js'),
+    entry: {
+        main: path.join(__dirname, 'VueApp/client.js')
+    },
     output: {
         path: path.join(__dirname, 'wwwroot/dist'),
         filename: 'bundle.client.js',
+        publicPath: '/dist/'
     },
     module: {
         loaders: [
